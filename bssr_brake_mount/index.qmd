@@ -1,0 +1,94 @@
+::: {.project-subtitle}
+Blue Sky Solar Racing Design Team
+:::
+
+::: {.panel-tabset}
+
+### THE PROBLEM
+
+::: {.two-col-side}
+
+::: {}
+![](bssr_brake_mount/images/the_problem.png)
+:::
+
+::: {}
+- Sudden failure of the legacy brake caliper mountings during dynamic testing of the redesigned solar car 2 weeks before the American Solar Challenge
+- Diagnosed failure and redesigned components in under 24 hours to ensure vehicle could resume testing
+:::
+
+:::
+
+### THE STEPS
+
+::: {.two-col-cards}
+
+::: {.step-card}
+![](bssr_brake_mount/images/brake_ear_fea.png)
+
+- Identified failure mode as deformation of brake ear assembly causing clashing against the rotating wheel hub
+- Built new FEA models of brake ears and upright in ANSYS after discovering previous designs were not analyzed properly
+:::
+
+::: {.step-card}
+![](bssr_brake_mount/images/upright_fea.png)
+
+- Revealed a safety factor of 0.7 on the brake ears and over 1.2 mm of combined deformation, confirming failure mode diagnosis
+- Identified out-of-plane bending in thin upright mounting flange due to non-vertical brake caliper mounting
+:::
+
+:::
+
+::: {.two-col-cards}
+
+::: {.step-card}
+![](bssr_brake_mount/images/solution_01.png)
+
+- Designed initial solution in CATIA based on reinforcing upright mounting flange using spare welded steel while retaining the existing brake ear
+- Since stress was very high on the current brake ears, I believed this design would still experience excessive stress and deformation
+:::
+
+::: {.step-card}
+![](bssr_brake_mount/images/solution_01_fea.png)
+
+- Hypothesis confirmed via FEA, showing a safety factor of 0.85
+- Designed new mount to completely replace brake ears and connect the calipers directly to the upright, prioritizing minimal risk of structural failure
+:::
+
+:::
+
+::: {.two-image-row}
+
+::: {}
+![](bssr_brake_mount/images/solution_02.png)
+:::
+
+::: {}
+![](bssr_brake_mount/images/solution_02_fea.png)
+:::
+
+:::
+
+- Final welded steel design CAD and FEA
+
+### RESULTS & TAKEAWAYS
+
+::: {.two-image-row}
+
+::: {}
+![](bssr_brake_mount/images/new_part.jpg)
+:::
+
+::: {}
+![](bssr_brake_mount/images/installed_part.jpg)
+:::
+
+:::
+
+- New design increased safety factor to 3 and reduced overall assembly deformation by 75%
+- Vehicle successfully completed hard braking tests and passed scrutineering at the American Solar Challenge
+- Deformation is a governing failure mode of the brake caliper mounting assembly and must be considered during structural analysis
+- Position brake caliper in future assemblies to minimize bending stresses
+- Always ensure designs inherited from previous teams are properly verified
+
+:::

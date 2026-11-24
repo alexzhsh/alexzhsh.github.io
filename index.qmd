@@ -1,0 +1,38 @@
+---
+title: "Alex Shen Engineering Portfolio"
+format:
+  html:
+    page-layout: full
+    code-fold: true
+jupyter: python3
+---
+
+::: {.panel-tabset}
+
+## Home
+
+::: {style="text-align: center; margin: 1.5rem 0;"}
+[Alex Shen]{style="font-size: 2.2rem; font-weight: 700;"}
+
+[Mechanical Engineering @ University of Toronto]{style="font-size: 1.4rem; color: #4b5563;"}
+:::
+
+{{< include home/index.qmd >}}
+
+## Suspension Redesign
+
+{{< include bssr_suspension/index.qmd >}}
+
+## Brake Caliper Mount
+
+{{< include bssr_brake_mount/index.qmd >}}
+
+## Bulkhead & Fuel Tank Design
+
+{{< include utat_tank/index.qmd >}}
+
+## Polypropylene Composite Analysis
+
+{{< include mcml_composite_analysis/index.qmd >}}
+
+:::

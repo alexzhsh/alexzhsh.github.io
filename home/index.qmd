@@ -1,0 +1,134 @@
+```{=html}
+<style>
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 2rem auto;
+}
+
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.project-card p {
+  margin: 0;
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  background-color: #f3f4f6;
+}
+
+.project-info {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.project-title {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+  text-decoration: none;
+  margin-bottom: 0.25rem;
+}
+
+.project-title:hover {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.project-org {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+}
+</style>
+```
+
+::: {.project-grid}
+
+::: {.project-card}
+![](home/images/bssr_suspension.jpg)
+
+::: {.project-info}
+[Suspension Redesign](#){.project-title data-target-tab="Suspension Redesign"}
+
+[Blue Sky Solar Racing Design Team]{.project-org}
+:::
+:::
+
+::: {.project-card}
+![](home/images/bssr_brake_mount.jpg)
+
+::: {.project-info}
+[Brake Caliper Mount](#){.project-title data-target-tab="Brake Caliper Mount"}
+
+[Blue Sky Solar Racing Design Team]{.project-org}
+:::
+:::
+
+::: {.project-card}
+![](home/images/utat_tank.jpg)
+
+::: {.project-info}
+[Bulkhead & Fuel Tank Design](#){.project-title data-target-tab="Bulkhead & Fuel Tank Design"}
+
+[University of Toronto Rocketry Design Team]{.project-org}
+:::
+:::
+
+::: {.project-card}
+![](home/images/mcml_composite_analysis.jpg)
+
+::: {.project-info}
+[Polypropylene Composite Analysis](#){.project-title data-target-tab="Polypropylene Composite Analysis"}
+
+[Multifunctional Composites Manufacturing Laboratory]{.project-org}
+:::
+:::
+
+:::
+
+```{=html}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("a[data-target-tab]").forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      var targetName = link.getAttribute("data-target-tab");
+      var topTabset = document.querySelector(".panel-tabset");
+      if (!topTabset) return;
+      var tabs = topTabset.querySelectorAll(":scope > ul.nav-tabs > li > a");
+      tabs.forEach(function (tab) {
+        if (tab.textContent.trim() === targetName) {
+          tab.click();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      });
+    });
+  });
+});
+</script>
+```

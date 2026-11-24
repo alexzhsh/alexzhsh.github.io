@@ -1,0 +1,73 @@
+::: {.project-subtitle}
+Multifunctional Composites Manufacturing Laboratory
+:::
+
+::: {.panel-tabset}
+
+### THE PROBLEM
+
+::: {.two-col-side}
+
+::: {}
+![](mcml_composite_analysis/images/problem.png)
+:::
+
+::: {}
+- Goal: Develop an automated method of evaluating graphene filler dispersion in polypropylene nanocomposites and correlate metrics to electrical conductivity
+- Existing image analysis workflow highly inefficient and required manual inputs of microscopy images
+- Tool could only return degree of blackness and lacked the capability to quantify the formation of co-continuous graphene networks in the composite
+:::
+
+:::
+
+### THE STEPS
+
+::: {.two-col-cards}
+
+::: {.step-card}
+![](mcml_composite_analysis/images/sample_prep.png)
+
+- Developed procedure to heat thin composite samples under pressure to isolate a single layer
+:::
+
+::: {.step-card}
+![](mcml_composite_analysis/images/dbscan.png)
+
+- Selected the DBSCAN clustering algorithm in order to handle to complex data with irregular shapes and noise
+:::
+
+:::
+
+::: {.two-image-row}
+
+::: {}
+![](mcml_composite_analysis/images/comparison.png)
+:::
+
+::: {}
+![](mcml_composite_analysis/images/results.jpg)
+:::
+
+:::
+
+- Developed Python script to separate filler from background, identify clusters, output visualization of graphene networks, and extract quantitative metrics using Scikit-learn, NumPy, OpenCV, Matplotlib
+- Determined that electrical conductivity increases were driven by larger average cluster sizes but a lower total number of clusters due to the formation of co-continuous conductive pathways
+
+### RESULTS & TAKEAWAYS
+
+::: {.two-image-row}
+
+::: {}
+![](mcml_composite_analysis/images/graphs.png)
+:::
+
+::: {}
+![](mcml_composite_analysis/images/visual.png)
+:::
+
+:::
+
+- Reduced analysis time reduced from hours using the existing manual software to seconds with an automated Python script
+- Developed filler dispersion metrics of average network size and total number of distinct networks with a strong correlation to electrical conductivity data; paper currently under review
+
+:::
