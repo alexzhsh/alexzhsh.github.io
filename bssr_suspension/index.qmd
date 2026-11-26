@@ -157,7 +157,6 @@ Blue Sky Solar Racing Design Team
 :::
 
 :::
-
 #### Results
 - Increased maximum lateral acceleration by 7% based on load transfer calculations
 - Improved figure-8 time by over 2 seconds on average, passing scrutineering and allowing vehicle to proceed to track race
@@ -171,7 +170,6 @@ Blue Sky Solar Racing Design Team
   </video>
 </div>
 ```
-
 #### Takeaways
 - Sanity checks on structural analysis using hand calculations and free body diagrams are essential
 - Ensure features critical to part function are controlled properly in engineering drawings, including joint locations and bearing holes

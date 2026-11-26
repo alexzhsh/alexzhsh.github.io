@@ -13,8 +13,8 @@ University of Toronto Rocketry Design Team
 :::
 
 ::: {}
-- Analyze and optimize the bulkheads and fuel tanks of UTAT's liquid propellent rocket
-- Update bulkheads to meet fluid volume requirements, select O-rings, produce engineering drawings, and conduct FEA on final design
+- Analyzed and optimized the bulkheads and fuel tanks of UTAT's liquid propellent rocket
+- Updated bulkheads to meet fluid volume requirements, selected O-rings, produced engineering drawings, and conducted FEA on final design
 :::
 
 :::

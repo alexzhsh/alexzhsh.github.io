@@ -83,7 +83,6 @@ Blue Sky Solar Racing Design Team
 :::
 
 :::
-
 #### Results
 - New design increased safety factor to 3 and reduced overall assembly deformation by 75%
 - Vehicle successfully completed hard braking tests and passed scrutineering at the American Solar Challenge
@@ -96,7 +95,6 @@ Blue Sky Solar Racing Design Team
   </video>
 </div>
 ```
-
 #### Takeaways
 - Deformation can be a governing failure mode and must always be considered during structural analysis
 - Design assemblies to minimize bending stresses by understanding load paths and free body diagrams

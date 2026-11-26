@@ -14,7 +14,7 @@ Multifunctional Composites Manufacturing Laboratory
 
 ::: {}
 - Goal: Develop an automated method of evaluating graphene filler dispersion in polypropylene nanocomposites and correlate metrics to electrical conductivity
-- Existing image analysis workflow highly inefficient and required manual inputs of microscopy images
+- Existing image analysis workflow was highly inefficient and required manual inputs of microscopy images
 - Tool could only return degree of blackness and lacked the capability to quantify the formation of co-continuous graphene networks in the composite
 :::
 
