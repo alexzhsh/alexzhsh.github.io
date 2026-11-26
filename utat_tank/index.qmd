@@ -4,7 +4,7 @@ University of Toronto Rocketry Design Team
 
 ::: {.panel-tabset}
 
-### THE PROBLEM
+### INTRODUCTION
 
 ::: {.two-col-side}
 
@@ -19,7 +19,7 @@ University of Toronto Rocketry Design Team
 
 :::
 
-### THE STEPS
+### PROCESS
 
 ::: {.two-col-cards}
 
@@ -44,7 +44,8 @@ University of Toronto Rocketry Design Team
 ::: {.step-card}
 ![](utat_tank/images/bulkhead_cad.png)
 
-- Proposed and implemented a 33% reduction in tank wall thickness and a 20% decrease in bolt count
+- Reduced factor of safety to 1.75 by decreasing tank wall thickness by 33% and bolt count by 20%
+- Implemented shoulder bolts to improve tank resistance to bolt shear failure
 - Redesigned bulkheads with Onshape for updated fluid volumes and produced engineering drawings
 :::
 
@@ -52,7 +53,7 @@ University of Toronto Rocketry Design Team
 ![](utat_tank/images/drawing.png)
 
 - Selected temperature- and chemical-compatible O-rings
-- Corrected existing groove dimensions and tolerances to match Parker handbook recommendations for proper sealing
+- Implemented groove dimensions and tolerances to match Parker handbook recommendations for proper sealing
 :::
 
 :::
@@ -70,12 +71,12 @@ University of Toronto Rocketry Design Team
 :::
 
 - Conducted FEA with ANSYS on final bulkheads and downcomer tube
-- Calculated worst-case thermal contraction of tank walls to ensure downcomer would not fail through compression, showing a safety factor in excess of 3.5
+- Calculated worst-case thermal deformation of fuel tank walls to resolve Launch Canada's concern that downcomer would fail due to thermal contraction, showing a safety factor in excess of 3.5
 
-### RESULTS & TAKEAWAYS
+### RESULTS
 
 - Fuel tank wall thickness reduced by 33% and bolt count by 20%
 - Maintained a safety factor >1.5 on all components for a 1000 psi maximum expected operating pressure
-- Resolved Launch Canada's concern that downcomer would fail during propellent filling due to tank length thermal contraction, allowing retention of existing design
+- Resolved Launch Canada's concerns regarding the downcomer, allowing retention of existing design
 
 :::

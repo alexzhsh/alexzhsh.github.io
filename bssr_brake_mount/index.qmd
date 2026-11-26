@@ -4,7 +4,7 @@ Blue Sky Solar Racing Design Team
 
 ::: {.panel-tabset}
 
-### THE PROBLEM
+### INTRODUCTION
 
 ::: {.two-col-side}
 
@@ -13,13 +13,13 @@ Blue Sky Solar Racing Design Team
 :::
 
 ::: {}
-- Sudden failure of the legacy brake caliper mountings during dynamic testing of the redesigned solar car 2 weeks before the American Solar Challenge
+- Sudden failure of the legacy brake caliper mountings during dynamic testing of the redesigned solar car two weeks before leaving for competition
 - Diagnosed failure and redesigned components in under 24 hours to ensure vehicle could resume testing
 :::
 
 :::
 
-### THE STEPS
+### PROCESS
 
 ::: {.two-col-cards}
 
@@ -52,7 +52,8 @@ Blue Sky Solar Racing Design Team
 ![](bssr_brake_mount/images/solution_01_fea.png)
 
 - Hypothesis confirmed via FEA, showing a safety factor of 0.85
-- Designed new mount to completely replace brake ears and connect the calipers directly to the upright, prioritizing minimal risk of structural failure
+- Designed new mount to completely replace brake ears and connect the calipers directly to the upright, 
+- Final welded steel design CAD and FEA shown below; high safety factors as we prioritized minimizing risk of structural failure and rapid implementation over mass efficiency
 :::
 
 :::
@@ -69,8 +70,6 @@ Blue Sky Solar Racing Design Team
 
 :::
 
-- Final welded steel design CAD and FEA
-
 ### RESULTS & TAKEAWAYS
 
 ::: {.two-image-row}
@@ -85,10 +84,22 @@ Blue Sky Solar Racing Design Team
 
 :::
 
+#### Results
 - New design increased safety factor to 3 and reduced overall assembly deformation by 75%
 - Vehicle successfully completed hard braking tests and passed scrutineering at the American Solar Challenge
-- Deformation is a governing failure mode of the brake caliper mounting assembly and must be considered during structural analysis
-- Position brake caliper in future assemblies to minimize bending stresses
-- Always ensure designs inherited from previous teams are properly verified
+
+```{=html}
+<div class="project-video">
+  <video controls playsinline preload="metadata">
+    <source src="bssr_brake_mount/images/braking.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+```
+
+#### Takeaways
+- Deformation can be a governing failure mode and must always be considered during structural analysis
+- Design assemblies to minimize bending stresses by understanding load paths and free body diagrams
+- Always ensure designs and analysis inherited from previous teams are properly verified
 
 :::

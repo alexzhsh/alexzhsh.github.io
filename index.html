@@ -69,6 +69,66 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<style>
+main#quarto-document-content > .panel-tabset > ul.nav-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background-color: #ffffff;
+  padding-top: 0.5rem;
+  box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.08);
+}
+
+main#quarto-document-content > .panel-tabset > .tab-content .panel-tabset > ul.nav-tabs {
+  position: sticky;
+  top: var(--outer-tabs-height, 49px);
+  z-index: 1010;
+  background-color: #ffffff;
+  padding-top: 0.5rem;
+  box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.08);
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var outerTabset = document.querySelector("main#quarto-document-content > .panel-tabset");
+  if (!outerTabset) return;
+  var outerTabs = outerTabset.querySelector(":scope > ul.nav-tabs");
+  if (!outerTabs) return;
+
+  function updateStickyOffset() {
+    var height = outerTabs.getBoundingClientRect().height;
+    document.documentElement.style.setProperty("--outer-tabs-height", height + "px");
+  }
+
+  updateStickyOffset();
+  if (typeof ResizeObserver !== "undefined") {
+    new ResizeObserver(updateStickyOffset).observe(outerTabs);
+  }
+  window.addEventListener("resize", updateStickyOffset);
+
+  outerTabs.querySelectorAll(":scope > li > a").forEach(function (tab) {
+    tab.addEventListener("shown.bs.tab", function () {
+      var targetTop = outerTabset.getBoundingClientRect().top + window.scrollY;
+      if (window.scrollY > targetTop) {
+        window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
+      }
+    });
+  });
+
+  outerTabset.querySelectorAll(".tab-content .panel-tabset").forEach(function (innerTabset) {
+    innerTabset.querySelectorAll(":scope > ul.nav-tabs > li > a").forEach(function (tab) {
+      tab.addEventListener("shown.bs.tab", function () {
+        var outerHeight = outerTabs.getBoundingClientRect().height;
+        var targetTop = innerTabset.getBoundingClientRect().top + window.scrollY - outerHeight;
+        if (window.scrollY > targetTop) {
+          window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
+        }
+      });
+    });
+  });
+});
+</script>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">Home</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">Suspension Redesign</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false" href="">Brake Caliper Mount</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-4" role="tab" aria-controls="tabset-5-4" aria-selected="false" href="">Bulkhead &amp; Fuel Tank Design</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-5" role="tab" aria-controls="tabset-5-5" aria-selected="false" href="">Polypropylene Composite Analysis</a></li></ul>
 <div class="tab-content">
@@ -240,6 +300,18 @@ document.addEventListener("DOMContentLoaded", function () {
   margin-top: 1rem;
 }
 
+.project-video {
+  margin: 1.5rem auto 2rem;
+  max-width: 800px;
+}
+
+.project-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
 @media (max-width: 768px) {
   .two-col-side,
   .two-col-cards,
@@ -252,7 +324,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <p>Blue Sky Solar Racing Design Team</p>
 </div>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">THE PROBLEM</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">THE STEPS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">RESULTS &amp; TAKEAWAYS</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">INTRODUCTION</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">PROCESS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">RESULTS &amp; TAKEAWAYS</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="two-col-side">
@@ -262,7 +334,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <div>
 <ul>
 <li>Solar car could not complete the Figure-8 turning test as prescribed by American Solar Challenge regulations and experienced wheel lift, indicating excessive lateral load transfer</li>
-<li>Proposed and evaluated solutions such as increasing track width, adding anti-roll bars, and increasing wheel vertical travel limits based on load transfer theory, reliability, cost, and time constraints</li>
+<li>Evaluated solutions such as increasing track width, adding anti-roll bars, and increasing wheel vertical travel limits based on load transfer theory, reliability, cost, and time constraints</li>
 <li>Identified 60 mm track width increase as most effective solution based on moment balance hand calculations</li>
 </ul>
 </div>
@@ -302,7 +374,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <p><img src="bssr_suspension/images/06_uca_drawing.png" class="img-fluid"></p>
 <ul>
 <li>Created engineering drawings for the upper control arm in CATIA</li>
-<li>Applied GD&amp;T to control features critical to part function and assembly, such as the clevis mounting faces and upright connection position</li>
+<li>Applied GD&amp;T to control features critical to part function, such as mounting points, clevis faces, and rod end attachment positions</li>
 <li>Analyzed tolerance stack-ups and allowable assembly misalignment to determine dimensional tolerance limits</li>
 </ul>
 </div>
@@ -328,6 +400,14 @@ document.addEventListener("DOMContentLoaded", function () {
 <li>Increased maximum lateral acceleration by 7% based on load transfer calculations</li>
 <li>Improved figure-8 time by over 2 seconds on average, passing scrutineering and allowing vehicle to proceed to track race</li>
 <li>Decreased UCA mass by 20% while increasing safety factor by 1.8 to account for lack of fatigue limit in aluminum</li>
+</ul>
+<div class="project-video">
+  <video controls="" playsinline="" preload="metadata">
+    <source src="bssr_suspension/images/figure_8.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+<ul>
 <li>Sanity checks on structural analysis using hand calculations and free body diagrams are essential</li>
 <li>Ensure features critical to part function are controlled properly in engineering drawings, including joint locations and bearing holes</li>
 <li>In future designs, eliminating the fillets/cutouts where the two UCA arms intersect would have further reduced stress concentrations and simplified manufacturing</li>
@@ -341,7 +421,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <p>Blue Sky Solar Racing Design Team</p>
 </div>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">THE PROBLEM</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">THE STEPS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">RESULTS &amp; TAKEAWAYS</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">INTRODUCTION</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">PROCESS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">RESULTS &amp; TAKEAWAYS</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <div class="two-col-side">
@@ -350,7 +430,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 <div>
 <ul>
-<li>Sudden failure of the legacy brake caliper mountings during dynamic testing of the redesigned solar car 2 weeks before the American Solar Challenge</li>
+<li>Sudden failure of the legacy brake caliper mountings during dynamic testing of the redesigned solar car two weeks before leaving for competition</li>
 <li>Diagnosed failure and redesigned components in under 24 hours to ensure vehicle could resume testing</li>
 </ul>
 </div>
@@ -385,7 +465,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <p><img src="bssr_brake_mount/images/solution_01_fea.png" class="img-fluid"></p>
 <ul>
 <li>Hypothesis confirmed via FEA, showing a safety factor of 0.85</li>
-<li>Designed new mount to completely replace brake ears and connect the calipers directly to the upright, prioritizing minimal risk of structural failure</li>
+<li>Designed new mount to completely replace brake ears and connect the calipers directly to the upright,</li>
+<li>Final welded steel design CAD and FEA shown below; high safety factors as we prioritized minimizing risk of structural failure and rapid implementation over mass efficiency</li>
 </ul>
 </div>
 </div>
@@ -397,9 +478,6 @@ document.addEventListener("DOMContentLoaded", function () {
 <p><img src="bssr_brake_mount/images/solution_02_fea.png" class="img-fluid"></p>
 </div>
 </div>
-<ul>
-<li>Final welded steel design CAD and FEA</li>
-</ul>
 </div>
 <div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
 <div class="two-image-row">
@@ -413,9 +491,17 @@ document.addEventListener("DOMContentLoaded", function () {
 <ul>
 <li>New design increased safety factor to 3 and reduced overall assembly deformation by 75%</li>
 <li>Vehicle successfully completed hard braking tests and passed scrutineering at the American Solar Challenge</li>
-<li>Deformation is a governing failure mode of the brake caliper mounting assembly and must be considered during structural analysis</li>
-<li>Position brake caliper in future assemblies to minimize bending stresses</li>
-<li>Always ensure designs inherited from previous teams are properly verified</li>
+</ul>
+<div class="project-video">
+  <video controls="" playsinline="" preload="metadata">
+    <source src="bssr_brake_mount/images/braking.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+<ul>
+<li>Deformation can be a governing failure mode and must always be considered during structural analysis</li>
+<li>Design assemblies to minimize bending stresses by understanding load paths and free body diagrams</li>
+<li>Always ensure designs and analysis inherited from previous teams are properly verified</li>
 </ul>
 </div>
 </div>
@@ -426,7 +512,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <p>University of Toronto Rocketry Design Team</p>
 </div>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">THE PROBLEM</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">THE STEPS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">RESULTS &amp; TAKEAWAYS</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">INTRODUCTION</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">PROCESS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">RESULTS &amp; TAKEAWAYS</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <div class="two-col-side">
@@ -462,7 +548,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class="step-card">
 <p><img src="utat_tank/images/bulkhead_cad.png" class="img-fluid"></p>
 <ul>
-<li>Proposed and implemented a 33% reduction in tank wall thickness and a 20% decrease in bolt count</li>
+<li>Reduced factor of safety to 1.75 by decreasing tank wall thickness by 33% and bolt count by 20%</li>
+<li>Implemented shoulder bolts to improve tank resistance to bolt shear failure</li>
 <li>Redesigned bulkheads with Onshape for updated fluid volumes and produced engineering drawings</li>
 </ul>
 </div>
@@ -470,7 +557,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <p><img src="utat_tank/images/drawing.png" class="img-fluid"></p>
 <ul>
 <li>Selected temperature- and chemical-compatible O-rings</li>
-<li>Corrected existing groove dimensions and tolerances to match Parker handbook recommendations for proper sealing</li>
+<li>Implemented groove dimensions and tolerances to match Parker handbook recommendations for proper sealing</li>
 </ul>
 </div>
 </div>
@@ -502,7 +589,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <p>Multifunctional Composites Manufacturing Laboratory</p>
 </div>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">THE PROBLEM</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">THE STEPS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">RESULTS &amp; TAKEAWAYS</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">INTRODUCTION</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">PROCESS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">RESULTS &amp; TAKEAWAYS</a></li></ul>
 <div class="tab-content">
 <div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
 <div class="two-col-side">

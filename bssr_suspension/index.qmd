@@ -45,6 +45,18 @@
   margin-top: 1rem;
 }
 
+.project-video {
+  margin: 1.5rem auto 2rem;
+  max-width: 800px;
+}
+
+.project-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
 @media (max-width: 768px) {
   .two-col-side,
   .two-col-cards,
@@ -61,7 +73,7 @@ Blue Sky Solar Racing Design Team
 
 ::: {.panel-tabset}
 
-### THE PROBLEM
+### INTRODUCTION
 
 ::: {.two-col-side}
 
@@ -71,13 +83,13 @@ Blue Sky Solar Racing Design Team
 
 ::: {}
 - Solar car could not complete the Figure-8 turning test as prescribed by American Solar Challenge regulations and experienced wheel lift, indicating excessive lateral load transfer
-- Proposed and evaluated solutions such as increasing track width, adding anti-roll bars, and increasing wheel vertical travel limits based on load transfer theory, reliability, cost, and time constraints
+- Evaluated solutions such as increasing track width, adding anti-roll bars, and increasing wheel vertical travel limits based on load transfer theory, reliability, cost, and time constraints
 - Identified 60 mm track width increase as most effective solution based on moment balance hand calculations
 :::
 
 :::
 
-### THE STEPS
+### PROCESS
 
 ::: {.two-col-cards}
 
@@ -119,7 +131,7 @@ Blue Sky Solar Racing Design Team
 ![](bssr_suspension/images/06_uca_drawing.png)
 
 - Created engineering drawings for the upper control arm in CATIA
-- Applied GD&T to control features critical to part function and assembly, such as the clevis mounting faces and upright connection position
+- Applied GD&T to control features critical to part function, such as mounting points, clevis faces, and rod end attachment positions
 - Analyzed tolerance stack-ups and allowable assembly misalignment to determine dimensional tolerance limits
 :::
 
@@ -146,9 +158,21 @@ Blue Sky Solar Racing Design Team
 
 :::
 
+#### Results
 - Increased maximum lateral acceleration by 7% based on load transfer calculations
 - Improved figure-8 time by over 2 seconds on average, passing scrutineering and allowing vehicle to proceed to track race
 - Decreased UCA mass by 20% while increasing safety factor by 1.8 to account for lack of fatigue limit in aluminum
+
+```{=html}
+<div class="project-video">
+  <video controls playsinline preload="metadata">
+    <source src="bssr_suspension/images/figure_8.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+```
+
+#### Takeaways
 - Sanity checks on structural analysis using hand calculations and free body diagrams are essential
 - Ensure features critical to part function are controlled properly in engineering drawings, including joint locations and bearing holes
 - In future designs, eliminating the fillets/cutouts where the two UCA arms intersect would have further reduced stress concentrations and simplified manufacturing

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Suspension Redesign</title>
+<title>index</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -44,43 +44,21 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="quarto-light">
+<body class="fullcontent quarto-light">
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
 
-<main class="content column-page" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Suspension Redesign</h1>
-<p class="subtitle lead">Blue Sky Solar Racing Design Team</p>
-</div>
+<main class="content" id="quarto-document-content">
 
 
-
-<div class="quarto-title-meta column-page">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
 
 
 <style>
-.back-link {
-  display: inline-block;
+.project-subtitle {
+  color: #6b7280;
+  font-size: 1.05rem;
+  margin-top: 0.25rem;
   margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-  text-decoration: none;
-  color: #2563eb;
-}
-
-.back-link:hover {
-  text-decoration: underline;
 }
 
 .two-col-side {
@@ -121,6 +99,18 @@ ul.task-list li input[type="checkbox"] {
   margin-top: 1rem;
 }
 
+.project-video {
+  margin: 1.5rem auto 2rem;
+  max-width: 800px;
+}
+
+.project-video video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
 @media (max-width: 768px) {
   .two-col-side,
   .two-col-cards,
@@ -129,27 +119,30 @@ ul.task-list li input[type="checkbox"] {
   }
 }
 </style>
-<p><a href="../home/index.html" class="back-link">← Back to Portfolio</a></p>
-<section id="the-problem" class="level2">
-<h2 class="anchored" data-anchor-id="the-problem">THE PROBLEM</h2>
+<div class="project-subtitle">
+<p>Blue Sky Solar Racing Design Team</p>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">INTRODUCTION</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">PROCESS</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">RESULTS &amp; TAKEAWAYS</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="two-col-side">
 <div>
-<p><img src="images/01_problem.jpg" class="img-fluid" alt="The Problem"></p>
+<p><img src="bssr_suspension/images/01_problem.jpg" class="img-fluid" alt="The Problem"></p>
 </div>
 <div>
 <ul>
 <li>Solar car could not complete the Figure-8 turning test as prescribed by American Solar Challenge regulations and experienced wheel lift, indicating excessive lateral load transfer</li>
-<li>Proposed and evaluated solutions such as increasing track width, adding anti-roll bars, and increasing wheel vertical travel limits based on load transfer theory, reliability, cost, and time constraints</li>
+<li>Evaluated solutions such as increasing track width, adding anti-roll bars, and increasing wheel vertical travel limits based on load transfer theory, reliability, cost, and time constraints</li>
 <li>Identified 60 mm track width increase as most effective solution based on moment balance hand calculations</li>
 </ul>
 </div>
 </div>
-</section>
-<section id="the-steps" class="level2">
-<h2 class="anchored" data-anchor-id="the-steps">THE STEPS</h2>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="two-col-cards">
 <div class="step-card">
-<p><img src="images/02_welded_uca.png" class="img-fluid" alt="UCA Welded"></p>
+<p><img src="bssr_suspension/images/02_welded_uca.png" class="img-fluid"></p>
 <ul>
 <li>Designed new upper control arm (UCA) by translating existing wireframe points outwards 30 mm while maintaining existing clevises for mounting to the chassis</li>
 <li>Led all structural simulations for both the new UCA and lower control arm (LCA)</li>
@@ -158,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </div>
 <div class="step-card">
-<p><img src="images/03_machined_uca.png" class="img-fluid" alt="Aluminum 7075-T6 UCA"></p>
+<p><img src="bssr_suspension/images/03_machined_uca.png" class="img-fluid"></p>
 <ul>
 <li>Designed aluminum 7075-T6 UCA in CATIA, performed FEA across 7 load cases targeting a safety factor of 3 and fatigue lifespan of 1000000 cycles, and iterated upon design with cutouts and fillets</li>
 <li>Developed best-practices for fatigue modelling, including the use of Goodman mean stress correction theory and fatigue strength factors</li>
@@ -169,49 +162,64 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="two-image-row">
 <div>
-<p><img src="images/04_uca_fea.png" class="img-fluid" alt="UCA FEA"></p>
+<p><img src="bssr_suspension/images/04_uca_fea.png" class="img-fluid"></p>
 </div>
 <div>
-<p><img src="images/05_lca_fea.png" class="img-fluid" alt="LCA FEA"></p>
+<p><img src="bssr_suspension/images/05_lca_fea.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="two-col-cards">
 <div class="step-card">
-<p><img src="images/06_uca_drawing.png" class="img-fluid" alt="UCA Engineering Dawing"></p>
+<p><img src="bssr_suspension/images/06_uca_drawing.png" class="img-fluid"></p>
 <ul>
 <li>Created engineering drawings for the upper control arm in CATIA</li>
-<li>Applied GD&amp;T to control features critical to part function and assembly, such as the clevis mounting faces and upright connection position</li>
+<li>Applied GD&amp;T to control features critical to part function, such as mounting points, clevis faces, and rod end attachment positions</li>
 <li>Analyzed tolerance stack-ups and allowable assembly misalignment to determine dimensional tolerance limits</li>
 </ul>
 </div>
 <div class="step-card">
-<p><img src="images/07_lca_drawing.png" class="img-fluid" alt="LCA Engineering Drawing"></p>
+<p><img src="bssr_suspension/images/07_lca_drawing.png" class="img-fluid"></p>
 <ul>
 <li>Identified CAD model errors and an incorrect interference fit which prevented spherical bearings from fitting properly in the new lower control arm</li>
 <li>Completely redrafted drawing overnight to correct CAD and implement the proper clearance fit</li>
 </ul>
 </div>
 </div>
-</section>
-<section id="results-takeaways" class="level2">
-<h2 class="anchored" data-anchor-id="results-takeaways">RESULTS &amp; TAKEAWAYS</h2>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <div class="two-image-row">
 <div>
-<p><img src="images/uca.jpg" class="img-fluid" alt="Results image left"></p>
+<p><img src="bssr_suspension/images/uca.jpg" class="img-fluid"></p>
 </div>
 <div>
-<p><img src="images/lca.png" class="img-fluid" alt="Results image right"></p>
+<p><img src="bssr_suspension/images/lca.png" class="img-fluid"></p>
 </div>
 </div>
+<section id="results" class="level4">
+<h4 class="anchored" data-anchor-id="results">Results</h4>
 <ul>
 <li>Increased maximum lateral acceleration by 7% based on load transfer calculations</li>
 <li>Improved figure-8 time by over 2 seconds on average, passing scrutineering and allowing vehicle to proceed to track race</li>
 <li>Decreased UCA mass by 20% while increasing safety factor by 1.8 to account for lack of fatigue limit in aluminum</li>
+</ul>
+<div class="project-video">
+  <video controls="" playsinline="" preload="metadata">
+    <source src="bssr_suspension/images/figure_8.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+</section>
+<section id="takeaways" class="level4">
+<h4 class="anchored" data-anchor-id="takeaways">Takeaways</h4>
+<ul>
 <li>Sanity checks on structural analysis using hand calculations and free body diagrams are essential</li>
 <li>Ensure features critical to part function are controlled properly in engineering drawings, including joint locations and bearing holes</li>
 <li>In future designs, eliminating the fillets/cutouts where the two UCA arms intersect would have further reduced stress concentrations and simplified manufacturing</li>
 </ul>
 </section>
+</div>
+</div>
+</div>
 
 </main>
 <!-- /main column -->

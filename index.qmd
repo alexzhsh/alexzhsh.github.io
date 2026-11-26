@@ -7,6 +7,69 @@ format:
 jupyter: python3
 ---
 
+```{=html}
+<style>
+main#quarto-document-content > .panel-tabset > ul.nav-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background-color: #ffffff;
+  padding-top: 0.5rem;
+  box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.08);
+}
+
+main#quarto-document-content > .panel-tabset > .tab-content .panel-tabset > ul.nav-tabs {
+  position: sticky;
+  top: var(--outer-tabs-height, 49px);
+  z-index: 1010;
+  background-color: #ffffff;
+  padding-top: 0.5rem;
+  box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.08);
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  var outerTabset = document.querySelector("main#quarto-document-content > .panel-tabset");
+  if (!outerTabset) return;
+  var outerTabs = outerTabset.querySelector(":scope > ul.nav-tabs");
+  if (!outerTabs) return;
+
+  function updateStickyOffset() {
+    var height = outerTabs.getBoundingClientRect().height;
+    document.documentElement.style.setProperty("--outer-tabs-height", height + "px");
+  }
+
+  updateStickyOffset();
+  if (typeof ResizeObserver !== "undefined") {
+    new ResizeObserver(updateStickyOffset).observe(outerTabs);
+  }
+  window.addEventListener("resize", updateStickyOffset);
+
+  outerTabs.querySelectorAll(":scope > li > a").forEach(function (tab) {
+    tab.addEventListener("shown.bs.tab", function () {
+      var targetTop = outerTabset.getBoundingClientRect().top + window.scrollY;
+      if (window.scrollY > targetTop) {
+        window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
+      }
+    });
+  });
+
+  outerTabset.querySelectorAll(".tab-content .panel-tabset").forEach(function (innerTabset) {
+    innerTabset.querySelectorAll(":scope > ul.nav-tabs > li > a").forEach(function (tab) {
+      tab.addEventListener("shown.bs.tab", function () {
+        var outerHeight = outerTabs.getBoundingClientRect().height;
+        var targetTop = innerTabset.getBoundingClientRect().top + window.scrollY - outerHeight;
+        if (window.scrollY > targetTop) {
+          window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
+        }
+      });
+    });
+  });
+});
+</script>
+```
+
 ::: {.panel-tabset}
 
 ## Home
