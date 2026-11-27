@@ -14,7 +14,8 @@ University of Toronto Rocketry Design Team
 
 ::: {}
 - Analyzed and optimized the bulkheads and fuel tanks of UTAT's liquid propellent rocket
-- Updated bulkheads to meet fluid volume requirements, selected O-rings, produced engineering drawings, and conducted FEA on final design
+- Existing design was thought to be underengineered by team leads and susceptible to bearing failure at expected operating pressures based on an inaccessible prior FEA
+- Performed detailed structural analysis with FEA and hand calculations, updated bulkheads to meet fluid volume requirements, selected O-rings,and produced engineering drawings
 :::
 
 :::
@@ -24,17 +25,27 @@ University of Toronto Rocketry Design Team
 ::: {.two-col-cards}
 
 ::: {.step-card}
+- Researched bolted joint analysis and performed hand calculations to determine stresses for each failure mode, including bolt tear out, casing tensile failure, bolt shear failure, and bearing failure
+:::
+
+::: {.step-card}
+-  Contrary to prior belief, my calculations showed that the tank was overengineered with a safety factor of 3, and that bolt shear was the actual governing failure mode
+:::
+
+:::
+
+::: {.two-col-cards}
+
+::: {.step-card}
 ![](utat_tank/images/broken_bulkhead.png)
 
-- Leads believed tank was engineered and would fail via bearing failure based on prior FEA
-- Researched bolted joint analysis and performed hand calculations to determine stresses for each failure mode, including bolt tear out, casing tensile failure, bolt shear failure, and bearing failure
+- Validated analysis via hydrostatic burst testing; tank withstood >2.5x design pressure and failed via bolt shear, exactly as predicted
 :::
 
 ::: {.step-card}
 ![](utat_tank/images/broken_bolts.png)
 
-- Contrary to prior belief, calculations showed that the tank was overengineered with a safety factor of 3, and that bolt shear was the actual governing failure mode
-- Validated analysis via hydrostatic burst testing; tank withstood >2.5x design pressure and failed via bolt shear as predicted
+- Built design sheet with Excel to automate calculations and determine optimal tank geometry for reduced weight
 :::
 
 :::
@@ -71,12 +82,24 @@ University of Toronto Rocketry Design Team
 :::
 
 - Conducted FEA with ANSYS on final bulkheads and downcomer tube
-- Calculated worst-case thermal deformation of fuel tank walls to resolve Launch Canada's concern that downcomer would fail due to thermal contraction, showing a safety factor in excess of 3.5
+- Calculated worst-case thermal deformation of propellent tank walls to resolve Launch Canada's concern that the downcomer (tube carrying fuel through the oxider tank) would fail due to thermal contraction, showing a safety factor in excess of 3.5
 
 ### RESULTS
 
+::: {.two-image-row}
+
+::: {}
+![](utat_tank/images/cad.png)
+:::
+
+::: {}
+![](utat_tank/images/manufacturing.jpg)
+:::
+
+:::
+
 - Fuel tank wall thickness reduced by 33% and bolt count by 20%
 - Maintained a safety factor >1.5 on all components for a 1000 psi maximum expected operating pressure
-- Resolved Launch Canada's concerns regarding the downcomer, allowing retention of existing design
+- Addressed Launch Canada's concerns regarding the downcomer, allowing retention of existing design
 
 :::

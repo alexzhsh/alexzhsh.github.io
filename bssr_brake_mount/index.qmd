@@ -45,7 +45,7 @@ Blue Sky Solar Racing Design Team
 ![](bssr_brake_mount/images/solution_01.png)
 
 - Designed initial solution in CATIA based on reinforcing upright mounting flange using spare welded steel while retaining the existing brake ear
-- Since stress was very high on the current brake ears, I believed this design would still experience excessive stress and deformation
+- Since this design did not address the highly stressed regions on the current brake ears, I believed it would still experience excessive stress and deformation
 :::
 
 ::: {.step-card}
@@ -53,7 +53,7 @@ Blue Sky Solar Racing Design Team
 
 - Hypothesis confirmed via FEA, showing a safety factor of 0.85
 - Designed new mount to completely replace brake ears and connect the calipers directly to the upright, 
-- Final welded steel design CAD and FEA shown below; high safety factors as we prioritized minimizing risk of structural failure and rapid implementation over mass efficiency
+- Final welded steel design CAD and FEA shown below; safety factors were high as we prioritized minimizing risk of structural failure and rapid implementation over mass efficiency
 :::
 
 :::

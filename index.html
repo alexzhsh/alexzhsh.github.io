@@ -464,7 +464,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <p><img src="bssr_brake_mount/images/solution_01.png" class="img-fluid"></p>
 <ul>
 <li>Designed initial solution in CATIA based on reinforcing upright mounting flange using spare welded steel while retaining the existing brake ear</li>
-<li>Since stress was very high on the current brake ears, I believed this design would still experience excessive stress and deformation</li>
+<li>Since this design did not address the highly stressed regions on the current brake ears, I believed it would still experience excessive stress and deformation</li>
 </ul>
 </div>
 <div class="step-card">
@@ -472,7 +472,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <ul>
 <li>Hypothesis confirmed via FEA, showing a safety factor of 0.85</li>
 <li>Designed new mount to completely replace brake ears and connect the calipers directly to the upright,</li>
-<li>Final welded steel design CAD and FEA shown below; high safety factors as we prioritized minimizing risk of structural failure and rapid implementation over mass efficiency</li>
+<li>Final welded steel design CAD and FEA shown below; safety factors were high as we prioritized minimizing risk of structural failure and rapid implementation over mass efficiency</li>
 </ul>
 </div>
 </div>
@@ -533,8 +533,9 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 <div>
 <ul>
-<li>Analyze and optimize the bulkheads and fuel tanks of UTAT’s liquid propellent rocket</li>
-<li>Update bulkheads to meet fluid volume requirements, select O-rings, produce engineering drawings, and conduct FEA on final design</li>
+<li>Analyzed and optimized the bulkheads and fuel tanks of UTAT’s liquid propellent rocket</li>
+<li>Existing design was thought to be underengineered by team leads and susceptible to bearing failure at expected operating pressures based on an inaccessible prior FEA</li>
+<li>Performed detailed structural analysis with FEA and hand calculations, updated bulkheads to meet fluid volume requirements, selected O-rings,and produced engineering drawings</li>
 </ul>
 </div>
 </div>
@@ -542,17 +543,27 @@ document.addEventListener("DOMContentLoaded", function () {
 <div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
 <div class="two-col-cards">
 <div class="step-card">
+<ul>
+<li>Researched bolted joint analysis and performed hand calculations to determine stresses for each failure mode, including bolt tear out, casing tensile failure, bolt shear failure, and bearing failure</li>
+</ul>
+</div>
+<div class="step-card">
+<ul>
+<li>Contrary to prior belief, my calculations showed that the tank was overengineered with a safety factor of 3, and that bolt shear was the actual governing failure mode</li>
+</ul>
+</div>
+</div>
+<div class="two-col-cards">
+<div class="step-card">
 <p><img src="utat_tank/images/broken_bulkhead.png" class="img-fluid"></p>
 <ul>
-<li>Leads believed tank was engineered and would fail via bearing failure based on prior FEA</li>
-<li>Researched bolted joint analysis and performed hand calculations to determine stresses for each failure mode, including bolt tear out, casing tensile failure, bolt shear failure, and bearing failure</li>
+<li>Validated analysis via hydrostatic burst testing; tank withstood &gt;2.5x design pressure and failed via bolt shear, exactly as predicted</li>
 </ul>
 </div>
 <div class="step-card">
 <p><img src="utat_tank/images/broken_bolts.png" class="img-fluid"></p>
 <ul>
-<li>Contrary to prior belief, calculations showed that the tank was overengineered with a safety factor of 3, and that bolt shear was the actual governing failure mode</li>
-<li>Validated analysis via hydrostatic burst testing; tank withstood &gt;2.5x design pressure and failed via bolt shear as predicted</li>
+<li>Built design sheet with Excel to automate calculations and determine optimal tank geometry for reduced weight</li>
 </ul>
 </div>
 </div>
@@ -583,14 +594,22 @@ document.addEventListener("DOMContentLoaded", function () {
 </div>
 <ul>
 <li>Conducted FEA with ANSYS on final bulkheads and downcomer tube</li>
-<li>Calculated worst-case thermal deformation of fuel tank walls to resolve Launch Canada’s concern that downcomer would fail due to thermal contraction, showing a safety factor in excess of 3.5</li>
+<li>Calculated worst-case thermal deformation of propellent tank walls to resolve Launch Canada’s concern that the downcomer (tube carrying fuel through the oxider tank) would fail due to thermal contraction, showing a safety factor in excess of 3.5</li>
 </ul>
 </div>
 <div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<div class="two-image-row">
+<div>
+<p><img src="utat_tank/images/cad.png" class="img-fluid"></p>
+</div>
+<div>
+<p><img src="utat_tank/images/manufacturing.jpg" class="img-fluid"></p>
+</div>
+</div>
 <ul>
 <li>Fuel tank wall thickness reduced by 33% and bolt count by 20%</li>
 <li>Maintained a safety factor &gt;1.5 on all components for a 1000 psi maximum expected operating pressure</li>
-<li>Resolved Launch Canada’s concerns regarding the downcomer, allowing retention of existing design</li>
+<li>Addressed Launch Canada’s concerns regarding the downcomer, allowing retention of existing design</li>
 </ul>
 </div>
 </div>
@@ -611,7 +630,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <div>
 <ul>
 <li>Goal: Develop an automated method of evaluating graphene filler dispersion in polypropylene nanocomposites and correlate metrics to electrical conductivity</li>
-<li>Existing image analysis workflow highly inefficient and required manual inputs of microscopy images</li>
+<li>Existing image analysis workflow was highly inefficient and required manual inputs of microscopy images</li>
 <li>Tool could only return degree of blackness and lacked the capability to quantify the formation of co-continuous graphene networks in the composite</li>
 </ul>
 </div>
